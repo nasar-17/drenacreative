@@ -72,12 +72,12 @@ export function About() {
           >
             <div className="flex-1 p-4 lg:p-6 flex flex-col gap-1">
               <span className="font-heading text-xl lg:text-2xl font-semibold text-white tracking-[-0.01em]">Mulai</span>
-              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">PERJALANAN INOVASI</span>
+              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">Konsultasi Gratis</span>
             </div>
             <div className="w-full h-[1px] md:w-[1px] md:h-auto bg-white/15 self-stretch" />
             <div className="flex-1 p-4 lg:p-6 flex flex-col gap-1">
               <span className="font-heading text-xl lg:text-2xl font-semibold text-white tracking-[-0.01em]">Fokus</span>
-              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">DESAIN & AKADEMIS</span>
+              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">Teknologi & Akademik</span>
             </div>
           </motion.div>
         </motion.div>
