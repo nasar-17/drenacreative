@@ -19,9 +19,8 @@ export function Services() {
       {/* ═══════════════════════════════════════════════════════════════════
           LAYANAN / SERVICES HEADER
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="relative text-center overflow-hidden bg-gradient-to-b from-[#f8f6f0] via-[#f0ede5] to-neutral-50 dark:from-primary-950 dark:via-primary-950 dark:to-primary-900 pt-16 md:pt-20 lg:pt-24 pb-10 md:pb-12 lg:pb-16 px-5 md:px-6 lg:px-8 transition-colors duration-300" id="layanan">
+      <section className="relative text-center overflow-hidden bg-white dark:bg-primary-950 pt-16 md:pt-20 lg:pt-24 pb-10 md:pb-12 lg:pb-16 px-5 md:px-6 lg:px-8 transition-colors duration-300" id="layanan">
         <div className="absolute inset-0 z-0 opacity-35 dark:opacity-20 transition-opacity duration-300">
-          <img src={servicesBg} alt="" className="w-full h-full object-cover object-top" />
         </div>
         <motion.div 
           className="relative z-10 max-w-[700px] mx-auto"
@@ -40,7 +39,7 @@ export function Services() {
       {/* ═══════════════════════════════════════════════════════════════════
           SERVICE CARDS
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="bg-neutral-50 dark:bg-primary-900 py-8 md:py-12 lg:py-16 px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
+      <section className="bg-white dark:bg-primary-950 py-8 md:py-12 lg:py-16 px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 — Pembuatan Web */}
           <motion.div 

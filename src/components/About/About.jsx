@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import aboutImg from '../../assets/about-building.png';
+import aboutImg from '../../assets/about-building.png'; // Creative workspace image
 
 export function About() {
   return (
@@ -52,7 +52,7 @@ export function About() {
           <div className="relative overflow-hidden rounded-t-xl aspect-[16/10] group border border-transparent dark:border-white/10 dark:border-b-0">
             <motion.img 
               src={aboutImg} 
-              alt="Modern architecture" 
+              alt="Creative professional working at a modern workspace" 
               className="w-full h-full object-cover block transition-transform duration-700 ease-out group-hover:scale-[1.03]" 
               initial={{ scale: 1.1 }}
               whileInView={{ scale: 1 }}

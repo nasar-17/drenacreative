@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export function Contact() {
   return (
-    <section className="bg-neutral-50 dark:bg-primary-950 py-20 md:py-24 lg:py-[160px] px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300" id="kontak">
+    <section className="bg-white dark:bg-primary-950 py-20 md:py-24 lg:py-[160px] px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300" id="kontak">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 gap-12 min-[900px]:gap-16 items-center">
         {/* Left Column */}
         <motion.div 
