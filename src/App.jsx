@@ -3,6 +3,7 @@ import { Hero } from './components/Hero/Hero';
 import { About } from './components/About/About';
 import { Services } from './components/Services/Services';
 import { Process } from './components/Process/Process';
+import { Pricing } from './components/Pricing/Pricing';
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp/FloatingWhatsApp';
@@ -21,6 +22,7 @@ function App() {
       <About />
       <Services />
       <Process />
+      <Pricing />
       <Contact />
       <Footer />
       <FloatingWhatsApp />

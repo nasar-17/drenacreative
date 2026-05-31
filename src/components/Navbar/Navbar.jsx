@@ -90,7 +90,7 @@ export function Navbar() {
             menuOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
           }`}
         >
-          {['Tentang', 'Layanan', 'Proses', 'Kontak'].map((item) => (
+          {['Tentang', 'Layanan', 'Proses', 'Paket', 'Kontak'].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
