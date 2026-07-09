@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import servicesBg from '../../assets/services-bg.png';
+import { Link } from 'react-router-dom';
 
 export function Services() {
   const cardVariants = {
@@ -22,7 +22,7 @@ export function Services() {
       <section className="relative text-center overflow-hidden bg-white dark:bg-primary-950 pt-16 md:pt-20 lg:pt-24 pb-10 md:pb-12 lg:pb-16 px-5 md:px-6 lg:px-8 transition-colors duration-300" id="layanan">
         <div className="absolute inset-0 z-0 opacity-35 dark:opacity-20 transition-opacity duration-300">
         </div>
-        <motion.div 
+        <motion.div
           className="relative z-10 max-w-[700px] mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export function Services() {
       <section className="bg-white dark:bg-primary-950 py-8 md:py-12 lg:py-16 px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 — Pembuatan Web */}
-          <motion.div 
+          <motion.div
             className="bg-white dark:bg-primary-950 border border-neutral-100 dark:border-white/10 rounded-xl p-6 lg:p-8 xl:p-10 flex flex-col transition-all duration-400 group hover:shadow-[0_12px_40px_rgba(53,88,114,0.08)] dark:hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:border-primary-100 dark:hover:border-primary/50"
             variants={cardVariants}
             initial="hidden"
@@ -61,19 +61,19 @@ export function Services() {
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">Pembuatan Web</h3>
             <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
               Membantu Anda memiliki website profesional sesuai kebutuhan, baik untuk bisnis, portofolio, maupun keperluan pribadi.
-Proses cepat, tampilan modern, dan siap digunakan.
+              Proses cepat, tampilan modern, dan siap digunakan.
             </p>
-            <a href="#" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
+            <Link to="/layanan-website" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
               <span>Lihat Detail</span>
               <svg className="transition-transform duration-300 group-hover/link:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Card 2 — Desain Kreatif */}
-          <motion.div 
+          <motion.div
             className="bg-white dark:bg-primary-950 border border-neutral-100 dark:border-white/10 rounded-xl p-6 lg:p-8 xl:p-10 flex flex-col transition-all duration-400 group hover:shadow-[0_12px_40px_rgba(53,88,114,0.08)] dark:hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:border-primary-100 dark:hover:border-primary/50"
             variants={cardVariants}
             initial="hidden"
@@ -93,19 +93,19 @@ Proses cepat, tampilan modern, dan siap digunakan.
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">Desain Kreatif</h3>
             <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
               Menyediakan layanan desain yang menarik dan sesuai kebutuhan Anda, mulai dari UI/UX, poster, hingga konten digital lainnya.
-Desain simpel, jelas, dan mudah dipahami.
+              Desain simpel, jelas, dan mudah dipahami.
             </p>
-            <a href="#" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
+            <Link to="/layanan-design" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
               <span>Lihat Portofolio</span>
               <svg className="transition-transform duration-300 group-hover/link:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Card 3 — Tugas Kuliah */}
-          <motion.div 
+          <motion.div
             className="bg-white dark:bg-primary-950 border border-neutral-100 dark:border-white/10 rounded-xl p-6 lg:p-8 xl:p-10 flex flex-col transition-all duration-400 group hover:shadow-[0_12px_40px_rgba(53,88,114,0.08)] dark:hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:border-primary-100 dark:hover:border-primary/50"
             variants={cardVariants}
             initial="hidden"
@@ -123,15 +123,15 @@ Desain simpel, jelas, dan mudah dipahami.
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">Tugas Kuliah</h3>
             <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
               Membantu menyelesaikan tugas kuliah dengan rapi, tepat waktu, dan sesuai kebutuhan Anda.
-Cocok untuk Anda yang ingin hasil maksimal tanpa ribet.
+              Cocok untuk Anda yang ingin hasil maksimal tanpa ribet.
             </p>
-            <a href="#" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
+            <Link to="/layanan-tugas" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
               <span>Konsultasi Sekarang</span>
               <svg className="transition-transform duration-300 group-hover/link:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

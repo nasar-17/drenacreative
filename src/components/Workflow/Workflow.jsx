@@ -1,0 +1,128 @@
+import { motion } from 'framer-motion';
+
+/**
+ * Workflow
+ * Reusable process timeline — identical visual to Process.jsx but accepts
+ * a `steps` prop so each service page can define its own workflow.
+ *
+ * Each step: { icon: JSX, title: string, description: string }
+ *
+ * Default steps match the existing Process section content.
+ */
+
+const defaultSteps = [
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+    title: 'Konsultasi',
+    description: 'Kami memulai dengan memahami kebutuhan dan tujuan Anda secara detail, agar solusi yang diberikan benar-benar sesuai.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    ),
+    title: 'Perencanaan & Desain',
+    description: 'Kami merancang konsep dan tampilan yang sesuai dengan kebutuhan Anda, dengan fokus pada kemudahan penggunaan dan tampilan yang profesional.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
+      </svg>
+    ),
+    title: 'Revisi & Penyelesaian',
+    description: 'Kami melakukan pengecekan akhir dan revisi jika diperlukan, hingga hasil benar-benar siap digunakan.',
+  },
+  {
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+        <polyline points="22 4 12 14.01 9 11.01" />
+      </svg>
+    ),
+    title: 'Pengiriman',
+    description: 'Tinjauan struktural akhir, penerapan, dan serah terima. Memastikan kualitas jangka panjang dan kinerja tingkat tinggi.',
+  },
+];
+
+export function Workflow({ title = 'Cara Kami Bekerja', subtitle, steps = defaultSteps }) {
+  return (
+    <section className="bg-white dark:bg-primary-950 pt-20 md:pt-24 lg:pt-[120px] pb-16 lg:pb-[100px] px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300">
+      {/* Header */}
+      <motion.div
+        className="text-center max-w-[600px] mx-auto mb-12 lg:mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="font-heading text-[2rem] md:text-4xl lg:text-[3rem] font-bold text-primary-800 dark:text-white tracking-[-0.02em] mb-5 leading-[1.15] transition-colors duration-300">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="font-body text-sm md:text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+            {subtitle}
+          </p>
+        )}
+      </motion.div>
+
+      {/* Timeline */}
+      <div className="relative max-w-[900px] mx-auto">
+        {/* Vertical line */}
+        <motion.div
+          className="absolute top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-neutral-200 dark:via-white/10 to-transparent left-[15px] min-[900px]:left-1/2 min-[900px]:-translate-x-1/2"
+          initial={{ height: 0 }}
+          whileInView={{ height: '100%' }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5 }}
+        />
+
+        {steps.map((step, i) => {
+          const isLeft = i % 2 === 0;
+          return (
+            <motion.div
+              key={i}
+              className={`grid grid-cols-[32px_1fr] min-[900px]:grid-cols-[1fr_auto_1fr] items-start min-[900px]:items-center gap-3 min-[900px]:gap-0 ${
+                i < steps.length - 1 ? 'mb-8 md:mb-12 min-[900px]:mb-24' : ''
+              } relative`}
+              initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{ duration: 0.6 }}
+            >
+              {/* Dot */}
+              <div className="col-start-1 row-start-1 min-[900px]:col-start-2 justify-self-center mt-6 min-[900px]:mt-0 w-[14px] h-[14px] rounded-full bg-neutral-300 dark:bg-neutral-600 border-[3px] border-neutral-50 dark:border-primary-900 relative z-10 shadow-[0_0_0_4px_rgba(53,88,114,0.06)] dark:shadow-[0_0_0_4px_rgba(255,255,255,0.05)] transition-all duration-400" />
+
+              {/* Card */}
+              <div
+                className={`col-start-2 row-start-1 min-[900px]:${
+                  isLeft
+                    ? 'col-start-1 justify-self-end mr-8'
+                    : 'col-start-3 justify-self-start ml-8'
+                } bg-white dark:bg-primary-950 rounded-xl p-5 md:p-6 lg:p-8 shadow-[0_4px_24px_rgba(53,88,114,0.06)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.3)] border border-[rgba(53,88,114,0.06)] dark:border-white/10 max-w-none min-[900px]:max-w-[280px] transition-all duration-400 group hover:shadow-[0_8px_36px_rgba(53,88,114,0.1)] dark:hover:shadow-[0_8px_36px_rgba(0,0,0,0.4)] hover:-translate-y-[3px]`}
+              >
+                <div className="w-11 h-11 flex items-center justify-center rounded-lg bg-tertiary-100 dark:bg-primary-900 text-primary dark:text-primary-300 mb-4 transition-all duration-300 group-hover:bg-primary group-hover:text-white dark:group-hover:bg-primary dark:group-hover:text-white">
+                  {step.icon}
+                </div>
+                <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+                  {step.description}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
