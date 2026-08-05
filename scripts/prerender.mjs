@@ -16,6 +16,7 @@ const ROUTES = [
   { path: '/layanan-aplikasi', file: 'layanan-aplikasi.html' },
   { path: '/layanan-ai-content-branding', file: 'layanan-ai-content-branding.html' },
   { path: '/produk', file: 'produk.html' },
+  { path: '/tentang', file: 'tentang.html' },
   { path: '/privacy', file: 'privacy.html' },
   { path: '/terms', file: 'terms.html' },
 ];

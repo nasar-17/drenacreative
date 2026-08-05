@@ -14,6 +14,7 @@ const LayananDesign = lazy(() => import('./pages/LayananDesign/LayananDesign').t
 const LayananAplikasi = lazy(() => import('./pages/LayananAplikasi/LayananAplikasi').then((m) => ({ default: m.LayananAplikasi })));
 const LayananAIContentBranding = lazy(() => import('./pages/LayananAIContentBranding/LayananAIContentBranding').then((m) => ({ default: m.LayananAIContentBranding })));
 const Produk = lazy(() => import('./pages/Produk/Produk').then((m) => ({ default: m.Produk })));
+const Tentang = lazy(() => import('./pages/Tentang/Tentang').then((m) => ({ default: m.Tentang })));
 const Privacy = lazy(() => import('./pages/Privacy/Privacy').then((m) => ({ default: m.Privacy })));
 const Terms = lazy(() => import('./pages/Terms/Terms').then((m) => ({ default: m.Terms })));
 
@@ -54,6 +55,7 @@ function App() {
             <Route path="/layanan-aplikasi" element={<LayananAplikasi />} />
             <Route path="/layanan-ai-content-branding" element={<LayananAIContentBranding />} />
             <Route path="/produk" element={<Produk />} />
+            <Route path="/tentang" element={<Tentang />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="*" element={<Home />} />

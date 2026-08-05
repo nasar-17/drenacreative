@@ -27,6 +27,14 @@ export function Footer() {
           </li>
           <li>
             <Link
+              to="/tentang"
+              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-600 dark:text-neutral-300 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
+            >
+              TENTANG KAMI
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/privacy"
               className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-600 dark:text-neutral-300 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
             >

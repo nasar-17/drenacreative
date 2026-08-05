@@ -5,6 +5,7 @@
     { "source": "/layanan-aplikasi", "destination": "/layanan-aplikasi.html" },
     { "source": "/layanan-ai-content-branding", "destination": "/layanan-ai-content-branding.html" },
     { "source": "/produk", "destination": "/produk.html" },
+    { "source": "/tentang", "destination": "/tentang.html" },
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/(.*)", "destination": "/index.html" }
