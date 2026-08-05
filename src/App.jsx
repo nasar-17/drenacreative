@@ -7,6 +7,7 @@ import { Home } from './pages/Home/Home';
 import { LayananWebsite } from './pages/LayananWebsite/LayananWebsite';
 import { LayananDesign } from './pages/LayananDesign/LayananDesign';
 import { LayananTugas } from './pages/LayananTugas/LayananTugas';
+import { Produk } from './pages/Produk/Produk';
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/layanan-website" element={<LayananWebsite />} />
         <Route path="/layanan-design" element={<LayananDesign />} />
         <Route path="/layanan-tugas" element={<LayananTugas />} />
+        <Route path="/produk" element={<Produk />} />
       </Routes>
     </>
   );
