@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import aboutImg from '../../assets/about-building.png'; // Creative workspace image
+import aboutImg from '../../assets/gen/about-building.webp'; // Creative workspace image
 
 export function About() {
   return (

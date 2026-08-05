@@ -1,6 +1,6 @@
-import portfolioWebImg from '../assets/portfolio-web.png';
-import portfolioDesignImg from '../assets/portfolio-design.png';
-import portfolioTugasImg from '../assets/portfolio-tugas.png';
+import portfolioWebImg from '../assets/gen/portfolio-web.webp';
+import portfolioDesignImg from '../assets/gen/portfolio-design.webp';
+import portfolioTugasImg from '../assets/gen/portfolio-tugas.webp';
 
 /* ══════════════════════════════════════════════════════════════════════════
    DATA KLIEN — WAJIB DIGANTI DENGAN DATA ASLI
@@ -75,26 +75,8 @@ export const categoryImage = {
   Aplikasi: portfolioTugasImg,
 };
 
-export const testimonials = [
-  {
-    id: 1,
-    name: 'Budi Santoso',
-    role: 'Pemilik Kopi Senja, Jakarta',
-    text: 'Website coffee shop saya jadi jauh lebih profesional. Proses cepat, komunikasinya mudah, dan hasilnya melampaui ekspektasi. Pelanggan baru banyak yang datang dari website ini!',
-    initials: 'BS',
-  },
-  {
-    id: 2,
-    name: 'Siti Rahayu',
-    role: 'Owner @beauty.rizky, Bandung',
-    text: 'Konten feed dan copywriting AI dari Drena sangat estetik dan konsisten. Pengerjaan cepat, responsif, dan meningkatkan konversi penjualan digital kami secara drastis.',
-    initials: 'SR',
-  },
-  {
-    id: 3,
-    name: 'Rizky Pratama',
-    role: 'Co-Founder Tech Startup, Jakarta',
-    text: 'Sangat terbantu dalam pembuatan MVP aplikasi SaaS kami. Kode bersih, terdokumentasi dengan baik, dan developer-friendly. Siap bekerja sama lagi!',
-    initials: 'RP',
-  },
-];
+// Testimoni masih menunggu data asli dari klien.
+// Isi array berikut dengan format:
+//   { id, name, role, text, initials }
+// Section "Kata Mereka" di beranda otomatis tampil saat array ini tidak kosong.
+export const testimonials = [];

@@ -8,8 +8,8 @@ import { Footer } from '../../components/Footer/Footer';
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader';
 import { SEO } from '../../components/SEO/SEO';
 
-import portfolioWebImg from '../../assets/portfolio-web.png';
-import heroWebImg from '../../assets/hero-web.png';
+import portfolioWebImg from '../../assets/gen/portfolio-web.webp';
+import heroWebImg from '../../assets/gen/hero-web.webp';
 
 /* ══════════════════════════════════════════════════════════════════════════
    WORKFLOW STEPS

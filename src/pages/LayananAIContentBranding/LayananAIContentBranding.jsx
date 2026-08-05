@@ -7,8 +7,8 @@ import { Footer } from '../../components/Footer/Footer';
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader';
 import { SEO } from '../../components/SEO/SEO';
 
-import portfolioDesignImg from '../../assets/portfolio-design.png';
-import heroDesignImg from '../../assets/hero-design.png';
+import portfolioDesignImg from '../../assets/gen/portfolio-design.webp';
+import heroDesignImg from '../../assets/gen/hero-design.webp';
 
 /* ══════════════════════════════════════════════════════════════════════════
    LAYANAN AI CONTENT BRANDING DATA

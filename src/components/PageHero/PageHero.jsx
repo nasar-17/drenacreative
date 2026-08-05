@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import heroBg from '../../assets/hero-bg.png';
+
+const DEFAULT_HERO = '/hero-bg.webp';
 
 /**
  * PageHero
@@ -35,7 +36,7 @@ export function PageHero({
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src={bgImage || heroBg}
+          src={bgImage || DEFAULT_HERO}
           alt=""
           className="w-full h-full object-cover object-center block"
           width="1920"

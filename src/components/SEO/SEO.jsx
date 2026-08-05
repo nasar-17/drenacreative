@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { registerMeta } from '../../lib/seoRegistry';
 
 const SITE_URL = 'https://drenacreative.vercel.app';
 
@@ -52,6 +53,10 @@ function removeJsonLd(id) {
 export function SEO({ title, description, ogImage, jsonLd = [], noindex = false }) {
   const { pathname } = useLocation();
   const canonicalUrl = `${SITE_URL}${pathname}`;
+  const resolvedOgImage = ogImage || `${SITE_URL}/og-image.png`;
+
+  // Daftarkan meta sinkron untuk prerender SSG
+  registerMeta({ title, description, canonicalUrl, ogImage: resolvedOgImage, noindex, jsonLd });
 
   useEffect(() => {
     if (title) document.title = title;
@@ -67,12 +72,12 @@ export function SEO({ title, description, ogImage, jsonLd = [], noindex = false 
     upsertMeta('property', 'og:url', canonicalUrl);
     if (title) upsertMeta('property', 'og:title', title);
     if (description) upsertMeta('property', 'og:description', description);
-    upsertMeta('property', 'og:image', ogImage || `${SITE_URL}/Logo.png`);
+    upsertMeta('property', 'og:image', resolvedOgImage);
 
     // Twitter Card
     if (title) upsertMeta('name', 'twitter:title', title);
     if (description) upsertMeta('name', 'twitter:description', description);
-    upsertMeta('name', 'twitter:image', ogImage || `${SITE_URL}/Logo.png`);
+    upsertMeta('name', 'twitter:image', resolvedOgImage);
 
     // JSON-LD blocks (per id — hanya halaman ini yang dirender)
     const rendered = jsonLd.map(({ id, data }) => {
@@ -82,7 +87,7 @@ export function SEO({ title, description, ogImage, jsonLd = [], noindex = false 
     return () => {
       rendered.forEach((id) => removeJsonLd(id));
     };
-  }, [title, description, canonicalUrl, ogImage, noindex, jsonLd]);
+  }, [title, description, canonicalUrl, resolvedOgImage, noindex, jsonLd]);
 
   return null;
 }

@@ -6,16 +6,23 @@ export function Hero() {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden" id="hero">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover object-center block"
-          width="1920"
-          height="1080"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="/hero-bg-mobile.webp 768w, /hero-bg.webp 1600w"
+            sizes="100vw"
+          />
+          <img
+            src={heroBg}
+            alt=""
+            className="w-full h-full object-cover object-center block"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-[#283f54]/70 via-[#355872]/75 to-[#1c2e3e]/80" />
       </div>
 

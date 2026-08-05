@@ -6,8 +6,6 @@ import { Footer } from '../../components/Footer/Footer';
 import { SEO } from '../../components/SEO/SEO';
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader';
 
-import heroBg from '../../assets/hero-bg.png';
-
 /* ══════════════════════════════════════════════════════════════════════════
    PRODUCTS DATA
    ══════════════════════════════════════════════════════════════════════════ */
@@ -106,7 +104,6 @@ export function Produk() {
         title="Karya Digital & Aplikasi SaaS Kami"
         subtitle="Kami merancang dan membangun platform software mandiri untuk memecahkan masalah nyata, mengoptimalkan proses bisnis, dan meningkatkan efisiensi operasional."
         ctaLabel="Konsultasi Produk"
-        bgImage={heroBg}
       />
 
       {/* ── 2. Filters & Products Grid ── */}

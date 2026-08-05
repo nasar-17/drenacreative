@@ -600,7 +600,8 @@ export function Home() {
         </div>
       </section>
 
-      {/* ── 9. Section: Kata Mereka ── */}
+      {/* ── 9. Section: Kata Mereka (hanya tampil jika ada data testimoni) ── */}
+      {testimonials.length > 0 && (
       <section className="bg-white dark:bg-primary-950 py-16 md:py-20 lg:py-24 px-5 md:px-6 lg:px-8 overflow-hidden transition-colors duration-300 border-t border-neutral-100 dark:border-white/5" id="kata-mereka">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-12 md:mb-16">
@@ -645,6 +646,7 @@ export function Home() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ── 10. Section: FAQ ── */}
       <div id="faq">

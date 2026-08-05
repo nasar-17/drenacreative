@@ -7,8 +7,8 @@ import { Footer } from '../../components/Footer/Footer';
 import { SectionHeader } from '../../components/SectionHeader/SectionHeader';
 import { SEO } from '../../components/SEO/SEO';
 
-import portfolioTugasImg from '../../assets/portfolio-tugas.png';
-import heroWebImg from '../../assets/hero-web.png';
+import portfolioTugasImg from '../../assets/gen/portfolio-tugas.webp';
+import heroWebImg from '../../assets/gen/hero-web.webp';
 
 /* ══════════════════════════════════════════════════════════════════════════
    LAYANAN APLIKASI DATA

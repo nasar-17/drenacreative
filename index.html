@@ -8,18 +8,30 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#162530" />
     <link rel="canonical" href="https://drenacreative.vercel.app/" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Preload LCP image (hero, WebP, responsive) -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      imagesrcset="/hero-bg-mobile.webp 768w, /hero-bg.webp 1600w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Drena Creative" />
     <meta property="og:title" content="Drena Creative — Solusi Website, Desain & Aplikasi Profesional" />
     <meta property="og:description" content="Layanan website, desain kreatif, dan pengembangan aplikasi. Cepat, profesional, dan terjangkau." />
     <meta property="og:url" content="https://drenacreative.vercel.app/" />
-    <meta property="og:image" content="https://drenacreative.vercel.app/Logo.png" />
+    <meta property="og:image" content="https://drenacreative.vercel.app/og-image.png" />
     <meta property="og:locale" content="id_ID" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Drena Creative — Solusi Website, Desain & Aplikasi Profesional" />
     <meta name="twitter:description" content="Layanan website, desain kreatif, dan pengembangan aplikasi. Cepat, profesional, dan terjangkau." />
-    <meta name="twitter:image" content="https://drenacreative.vercel.app/Logo.png" />
+    <meta name="twitter:image" content="https://drenacreative.vercel.app/og-image.png" />
 
     <!-- Google Fonts: Poppins (matches tailwind.config fontFamily) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

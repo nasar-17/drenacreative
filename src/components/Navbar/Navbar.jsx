@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { testimonials } from '../../data/siteData';
 
 /* ══════════════════════════════════════════════════════════════════════════
    NAV STRUCTURE
@@ -19,7 +20,7 @@ const NAV_ITEMS = [
   },
   { label: 'Produk Kami', hash: 'produk-kami' },
   { label: 'Karya Kami', hash: 'karya-kami' },
-  { label: 'Kata Mereka', hash: 'kata-mereka' },
+  ...(testimonials.length > 0 ? [{ label: 'Kata Mereka', hash: 'kata-mereka' }] : []),
   { label: 'FAQ', hash: 'faq' },
 ];
 
