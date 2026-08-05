@@ -34,7 +34,7 @@ export function ScrollToTop() {
         return () => clearTimeout(t1);
       }
     } else {
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: 'auto' });
     }
   }, [pathname, hash]);
 

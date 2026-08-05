@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import heroBg from '../../assets/hero-bg.png';
-import { Link } from 'react-router-dom';
 
 /**
  * PageHero
@@ -35,14 +34,15 @@ export function PageHero({
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <motion.img
+        <img
           src={bgImage || heroBg}
           alt=""
           className="w-full h-full object-cover object-center block"
-          initial={{ scale: 1.08, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1.5 }}
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#283f54]/75 via-[#355872]/80 to-[#1c2e3e]/85" />
       </div>
@@ -52,7 +52,7 @@ export function PageHero({
         {/* Eyebrow */}
         {eyebrow && (
           <motion.span
-            className="font-heading text-xs font-bold text-white/60 tracking-[0.2em] uppercase block mb-6"
+            className="font-heading text-xs font-bold text-white/80 tracking-[0.2em] uppercase block mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}

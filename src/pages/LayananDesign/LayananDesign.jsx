@@ -180,10 +180,10 @@ export function LayananDesign() {
             <h2 className="font-heading text-[1.75rem] md:text-4xl font-bold text-primary-800 dark:text-white leading-[1.15] tracking-[-0.02em] mb-6 transition-colors duration-300">
               Desain yang Berbicara, Brand yang Diingat
             </h2>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4 transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 transition-colors duration-300">
               Visual yang kuat adalah fondasi dari brand yang kuat. Setiap desain yang kami buat bukan sekadar indah secara estetika — melainkan dirancang strategis untuk menyampaikan pesan yang tepat kepada audiens yang tepat.
             </p>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed transition-colors duration-300">
               Tim desainer kami memahami psikologi warna, tipografi, dan komposisi visual untuk menghasilkan karya yang meninggalkan kesan mendalam dan memperkuat identitas brand Anda.
             </p>
           </motion.div>
@@ -202,7 +202,7 @@ export function LayananDesign() {
             ].map((stat) => (
               <div key={stat.label} className="bg-gradient-to-br from-primary-50 to-white dark:from-primary-900 dark:to-primary-950 border border-neutral-100 dark:border-white/10 rounded-xl p-6 text-center transition-colors duration-300">
                 <p className="font-heading text-3xl font-bold text-primary dark:text-tertiary-300 mb-1 tracking-[-0.02em]">{stat.num}</p>
-                <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 transition-colors duration-300">{stat.label}</p>
+                <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 transition-colors duration-300">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -236,14 +236,14 @@ export function LayananDesign() {
                 </div>
                 <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-1 tracking-[-0.01em] transition-colors duration-300">{item.title}</h3>
                 <p className="font-heading text-xs font-medium text-primary dark:text-primary-400 mb-3 transition-colors duration-300">{item.tagline}</p>
-                <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-[1.7] mb-5 grow transition-colors duration-300">{item.description}</p>
+                <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-[1.7] mb-5 grow transition-colors duration-300">{item.description}</p>
                 <ul className="flex flex-col gap-2 mb-5">
                   {item.features.map((f) => (
                     <li key={f} className="flex items-start gap-2">
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-[2px] text-primary dark:text-primary-300 transition-colors duration-300">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
-                      <span className="font-body text-xs text-neutral-600 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">{f}</span>
+                      <span className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -292,13 +292,17 @@ export function LayananDesign() {
                   <img
                     src={portfolioDesignImg}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="1200"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5 bg-white dark:bg-primary-950 transition-colors duration-300">
                   <span className="font-heading text-[9px] font-bold tracking-[0.1em] uppercase text-primary dark:text-primary-400 mb-2 block transition-colors duration-300">{item.type}</span>
                   <h3 className="font-heading text-sm font-bold text-primary-800 dark:text-white mb-1 transition-colors duration-300">{item.title}</h3>
-                  <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 transition-colors duration-300">{item.desc}</p>
+                  <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 transition-colors duration-300">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

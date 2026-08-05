@@ -68,7 +68,7 @@ export function Workflow({ title = 'Cara Kami Bekerja', subtitle, steps = defaul
           {title}
         </h2>
         {subtitle && (
-          <p className="font-body text-sm md:text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+          <p className="font-body text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
             {subtitle}
           </p>
         )}
@@ -115,7 +115,7 @@ export function Workflow({ title = 'Cara Kami Bekerja', subtitle, steps = defaul
                 <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+                <p className="font-body text-xs font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
                   {step.description}
                 </p>
               </div>

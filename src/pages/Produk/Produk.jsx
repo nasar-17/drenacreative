@@ -178,7 +178,7 @@ export function Produk() {
                     </p>
 
                     {/* Description */}
-                    <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6">
+                    <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
                       {product.description}
                     </p>
 
@@ -219,7 +219,7 @@ export function Produk() {
 
                   {/* Card Bottom CTA Link */}
                   <div className="px-8 py-5 md:px-10 md:py-6 bg-neutral-50 dark:bg-primary-950/40 border-t border-neutral-100 dark:border-white/5 flex items-center justify-between">
-                    <span className="font-body text-xs text-neutral-400 dark:text-neutral-500">
+                    <span className="font-body text-xs text-neutral-600 dark:text-neutral-300">
                       Ingin coba versi demo?
                     </span>
                     <a
@@ -256,19 +256,19 @@ export function Produk() {
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary-800 dark:text-white leading-tight mb-6">
               Arsitektur Modern untuk Kebutuhan Skala Besar
             </h2>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
               Semua produk SaaS kami dirancang menggunakan best practices arsitektur cloud, kontainerisasi, database teroptimasi, serta frontend responsif untuk memastikan kecepatan loading maksimal, keamanan data terjamin, dan kemudahan skalabilitas seiring bertumbuhnya bisnis Anda.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h5 className="font-heading text-sm font-semibold text-neutral-800 dark:text-white mb-2">Keamanan Utama</h5>
-                <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Implementasi token-based auth, HTTPS SSL, enkripsi database, dan proteksi dari serangan siber umum.
                 </p>
               </div>
               <div>
                 <h5 className="font-heading text-sm font-semibold text-neutral-800 dark:text-white mb-2">Kecepatan Tinggi</h5>
-                <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed">
                   Caching server, query database terindeks, dan asset delivery CDN terdistribusi.
                 </p>
               </div>
@@ -285,7 +285,7 @@ export function Produk() {
             <h4 className="font-heading text-lg font-bold text-neutral-800 dark:text-white mb-6">
               Ingin Membuat Produk SaaS Kustom Sendiri?
             </h4>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
               Punya ide produk startup atau aplikasi internal perusahaan? Tim kami siap mendesain, membangun, dan merilis aplikasi web SaaS Anda dari nol dengan teknologi mutakhir.
             </p>
             <a

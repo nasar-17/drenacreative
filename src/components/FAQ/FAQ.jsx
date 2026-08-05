@@ -34,7 +34,7 @@ function FAQItem({ item, index }) {
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="shrink-0 text-neutral-400 dark:text-neutral-500 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300"
+          className="shrink-0 text-neutral-600 dark:text-neutral-300 group-hover:text-primary dark:group-hover:text-primary-400 transition-colors duration-300"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M6 9l6 6 6-6" />
@@ -54,7 +54,7 @@ function FAQItem({ item, index }) {
           >
             <div className="px-5 md:px-6 pb-5 md:pb-6">
               <div className="h-[1px] bg-[rgba(53,88,114,0.08)] dark:bg-white/10 w-full mb-4 transition-colors duration-300" />
-              <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] transition-colors duration-300">
+              <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-[1.75] transition-colors duration-300">
                 {item.answer}
               </p>
             </div>

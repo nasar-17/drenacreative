@@ -30,7 +30,7 @@ export function Services() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-heading text-[1.75rem] md:text-[2.25rem] lg:text-[3.5rem] font-bold text-primary-800 dark:text-white tracking-[-0.02em] mb-6 leading-[1.15] transition-colors duration-300">Layanan Utama Kami</h2>
-          <p className="font-body text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] max-w-[560px] mx-auto transition-colors duration-300">
+          <p className="font-body text-base font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] max-w-[560px] mx-auto transition-colors duration-300">
             Kami menyediakan layanan pembuatan website, AI content branding, dan pembuatan aplikasi dengan proses cepat, hasil profesional, dan biaya terjangkau.
           </p>
         </motion.div>
@@ -59,7 +59,7 @@ export function Services() {
               </svg>
             </div>
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">Pembuatan Web</h3>
-            <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
+            <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-[1.75] mb-8 grow transition-colors duration-300">
               Membantu Anda memiliki website profesional sesuai kebutuhan, baik untuk bisnis, portofolio, maupun keperluan pribadi.
               Proses cepat, tampilan modern, dan siap digunakan.
             </p>
@@ -88,7 +88,7 @@ export function Services() {
               </svg>
             </div>
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">AI Content Branding</h3>
-            <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
+            <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-[1.75] mb-8 grow transition-colors duration-300">
               Membantu membuat konten copywriting, visual/gambar kustom, dan setup brand voice model bertenaga AI untuk memperkuat identitas brand Anda.
             </p>
             <Link to="/layanan-ai-content-branding" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">
@@ -116,7 +116,7 @@ export function Services() {
               </svg>
             </div>
             <h3 className="font-heading text-2xl font-bold text-primary-800 dark:text-white mb-4 tracking-[-0.01em] transition-colors duration-300">Pembuatan Aplikasi</h3>
-            <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.75] mb-8 grow transition-colors duration-300">
+            <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-[1.75] mb-8 grow transition-colors duration-300">
               Mengembangkan aplikasi web kustom, mobile apps Android & iOS, SaaS MVP, dan sistem backend API yang cepat, aman, dan mudah diskalakan.
             </p>
             <Link to="/layanan-aplikasi" className="inline-flex items-center gap-2 font-heading text-sm font-medium text-primary-800 dark:text-primary-300 no-underline transition-colors duration-300 mt-auto hover:text-primary dark:hover:text-primary-100 group/link">

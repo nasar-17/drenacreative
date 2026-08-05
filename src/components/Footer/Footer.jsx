@@ -11,7 +11,7 @@ export function Footer() {
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-heading text-[10px] md:text-[11px] font-bold text-primary-800 dark:text-neutral-500 tracking-[0.1em] uppercase m-0 transition-colors duration-300">
+        <p className="font-heading text-[10px] md:text-[11px] font-bold text-primary-800 dark:text-neutral-300 tracking-[0.1em] uppercase m-0 transition-colors duration-300">
           © 2026 DRENA CREATIVE. ALL RIGHTS RESERVED.
         </p>
         <ul className="flex flex-col min-[480px]:flex-row flex-wrap items-center justify-center gap-3 min-[480px]:gap-4 md:gap-6 list-none m-0 p-0">
@@ -20,23 +20,23 @@ export function Footer() {
               href="https://www.instagram.com/drena_creative/"
               target="_blank"
               rel="noreferrer"
-              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-400 dark:text-neutral-500 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
+              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-600 dark:text-neutral-300 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
             >
               INSTAGRAM
             </a>
           </li>
           <li>
             <Link
-              to="/"
-              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-400 dark:text-neutral-500 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
+              to="/privacy"
+              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-600 dark:text-neutral-300 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
             >
               PRIVACY POLICY
             </Link>
           </li>
           <li>
             <Link
-              to="/"
-              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-400 dark:text-neutral-500 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
+              to="/terms"
+              className="font-heading text-[10px] md:text-[11px] font-semibold text-neutral-600 dark:text-neutral-300 no-underline tracking-[0.1em] uppercase transition-colors duration-300 hover:text-primary dark:hover:text-primary-400"
             >
               TERMS OF USE
             </Link>

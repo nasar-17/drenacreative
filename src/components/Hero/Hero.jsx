@@ -6,14 +6,15 @@ export function Hero() {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden" id="hero">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <motion.img 
-          src={heroBg} 
-          alt="" 
+        <img
+          src={heroBg}
+          alt=""
           className="w-full h-full object-cover object-center block"
-          initial={{ scale: 1.1, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 1.5 }}
+          width="1920"
+          height="1080"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#283f54]/70 via-[#355872]/75 to-[#1c2e3e]/80" />
       </div>
@@ -67,9 +68,9 @@ export function Hero() {
           viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <span className="font-heading text-xs font-medium text-white/60 tracking-[0.2em]">GULIR</span>
+          <span className="font-heading text-xs font-medium text-white/80 tracking-[0.2em]">GULIR</span>
           <svg
-            className="w-4 h-4 text-white/60"
+            className="w-4 h-4 text-white/80"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

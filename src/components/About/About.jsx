@@ -18,11 +18,11 @@ export function About() {
             Partner Digital untuk Kebutuhan Akademik & Bisnis Anda.
           </h2>
 
-          <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 transition-colors duration-300">
-            DRENA CREATIVE hadir sebagai solusi bagi mahasiswa, UMKM, dan pemula yang membutuhkan layanan pembuatan website, desain, serta bantuan tugas akademik secara praktis dan profesional.
+          <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 transition-colors duration-300">
+            DRENA CREATIVE hadir sebagai solusi bagi mahasiswa, UMKM, dan pemula yang membutuhkan layanan pembuatan website, desain, serta pengembangan aplikasi secara praktis dan profesional.
           </p>
 
-          <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 transition-colors duration-300">
+          <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 transition-colors duration-300">
             Kami memahami bahwa tidak semua orang memiliki waktu dan kemampuan teknis untuk mengembangkan kebutuhan digitalnya. Oleh karena itu, kami menawarkan proses yang cepat, hasil yang tepat, dan biaya yang tetap terjangkau.Dengan pendekatan yang sederhana namun efektif, kami berkomitmen membantu Anda menyelesaikan kebutuhan digital tanpa kerumitan, sehingga Anda dapat fokus pada tujuan utama Anda.
 
           </p>
@@ -35,7 +35,7 @@ export function About() {
                 <path d="M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#layanan" className="inline-flex items-center justify-center gap-2 font-heading text-xs font-semibold tracking-[0.06em] py-[14px] px-7 no-underline transition-all duration-300 cursor-pointer bg-transparent text-primary-800 dark:text-primary-100 border-[1.5px] border-neutral-200 dark:border-primary-800 hover:border-primary dark:hover:border-primary-400 hover:text-primary dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/50 w-full md:w-auto">
+            <a href="#layanan-website" className="inline-flex items-center justify-center gap-2 font-heading text-xs font-semibold tracking-[0.06em] py-[14px] px-7 no-underline transition-all duration-300 cursor-pointer bg-transparent text-primary-800 dark:text-primary-100 border-[1.5px] border-neutral-200 dark:border-primary-800 hover:border-primary dark:hover:border-primary-400 hover:text-primary dark:hover:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900/50 w-full md:w-auto">
               Layanan Kami
             </a>
           </div>
@@ -53,6 +53,10 @@ export function About() {
             <motion.img 
               src={aboutImg} 
               alt="Creative professional working at a modern workspace" 
+              loading="lazy"
+              decoding="async"
+              width="1200"
+              height="750"
               className="w-full h-full object-cover block transition-transform duration-700 ease-out group-hover:scale-[1.03]" 
               initial={{ scale: 1.1 }}
               whileInView={{ scale: 1 }}
@@ -72,12 +76,12 @@ export function About() {
           >
             <div className="flex-1 p-4 lg:p-6 flex flex-col gap-1">
               <span className="font-heading text-xl lg:text-2xl font-semibold text-white tracking-[-0.01em]">Mulai</span>
-              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">Konsultasi Gratis</span>
+              <span className="font-heading text-[10px] font-semibold text-white/80 tracking-[0.12em] uppercase">Konsultasi Gratis</span>
             </div>
             <div className="w-full h-[1px] md:w-[1px] md:h-auto bg-white/15 self-stretch" />
             <div className="flex-1 p-4 lg:p-6 flex flex-col gap-1">
               <span className="font-heading text-xl lg:text-2xl font-semibold text-white tracking-[-0.01em]">Fokus</span>
-              <span className="font-heading text-[10px] font-semibold text-white/50 tracking-[0.12em] uppercase">Teknologi & Akademik</span>
+              <span className="font-heading text-[10px] font-semibold text-white/80 tracking-[0.12em] uppercase">Teknologi & Akademik</span>
             </div>
           </motion.div>
         </motion.div>

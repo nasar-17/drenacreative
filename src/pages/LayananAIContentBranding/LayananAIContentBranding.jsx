@@ -161,10 +161,10 @@ export function LayananAIContentBranding() {
             <h2 className="font-heading text-[1.75rem] md:text-4xl font-bold text-primary-800 dark:text-white leading-[1.15] tracking-[-0.02em] mb-6 transition-colors duration-300">
               Transformasikan Pemasaran Brand Anda Melalui AI
             </h2>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4 transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 transition-colors duration-300">
               Kecepatan dan konsistensi adalah kunci utama memenangkan persaingan di media sosial. Layanan AI Content Branding Drena Creative menggabungkan efisiensi generative AI tercanggih dengan kurasi rasa estetika dari tim profesional kami.
             </p>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed transition-colors duration-300">
               Dari copywriting artikel blog, deskripsi produk, caption media sosial, hingga pembuatan ilustrasi kustom siap pakai, kami memastikan brand Anda tetap bersuara dengan konsisten, cepat, dan dengan budget yang sangat bersahabat.
             </p>
           </motion.div>
@@ -183,7 +183,7 @@ export function LayananAIContentBranding() {
             ].map((stat, i) => (
               <div key={i} className="bg-neutral-50 dark:bg-primary-900 border border-neutral-100 dark:border-white/5 rounded-2xl p-6 text-center shadow-[0_4px_20px_rgba(53,88,114,0.03)] transition-colors duration-300">
                 <span className="font-heading text-[2rem] md:text-[2.5rem] font-bold text-primary dark:text-primary-400 block leading-none mb-2 transition-colors duration-300">{stat.num}</span>
-                <span className="font-body text-xs text-neutral-500 dark:text-neutral-400 font-semibold tracking-wide uppercase transition-colors duration-300">{stat.label}</span>
+                <span className="font-body text-xs text-neutral-600 dark:text-neutral-300 font-semibold tracking-wide uppercase transition-colors duration-300">{stat.label}</span>
               </div>
             ))}
           </motion.div>
@@ -216,7 +216,7 @@ export function LayananAIContentBranding() {
                   </div>
                   <h3 className="font-heading text-lg font-bold text-primary-800 dark:text-white mb-1 transition-colors duration-300">{service.title}</h3>
                   <p className="font-body text-[11px] font-bold text-primary dark:text-primary-400 tracking-wide uppercase mb-3 transition-colors duration-300">{service.tagline}</p>
-                  <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed mb-6 transition-colors duration-300">{service.description}</p>
+                  <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6 transition-colors duration-300">{service.description}</p>
                   
                   <div className="h-[1px] bg-neutral-100 dark:bg-white/10 my-4" />
                   <ul className="space-y-2 mb-6">
@@ -231,7 +231,7 @@ export function LayananAIContentBranding() {
                   </ul>
                 </div>
                 <div>
-                  <div className="font-heading text-xs font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-1">Harga</div>
+                  <div className="font-heading text-xs font-bold text-neutral-600 dark:text-neutral-300 uppercase tracking-wider mb-1">Harga</div>
                   <div className="font-heading text-base font-bold text-primary dark:text-primary-400 transition-colors duration-300">{service.price}</div>
                 </div>
               </motion.div>
@@ -252,7 +252,7 @@ export function LayananAIContentBranding() {
               title="Hasil Konten Kreatif AI"
               align="left"
             />
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed -mt-4 min-[900px]:mt-0 transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed -mt-4 min-[900px]:mt-0 transition-colors duration-300">
               Berikut beberapa contoh visual generator dan model bahasa khusus yang telah kami implementasikan untuk memperkuat komunikasi brand klien kami.
             </p>
           </div>
@@ -271,6 +271,10 @@ export function LayananAIContentBranding() {
                   <img
                     src={portfolioDesignImg}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="900"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-primary-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -278,7 +282,7 @@ export function LayananAIContentBranding() {
                 <div className="p-6">
                   <span className="font-body text-[10px] font-bold text-primary dark:text-primary-400 tracking-wider uppercase block mb-1.5 transition-colors duration-300">{item.type}</span>
                   <h4 className="font-heading text-sm font-bold text-neutral-800 dark:text-white mb-2 transition-colors duration-300">{item.title}</h4>
-                  <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 transition-colors duration-300">{item.desc}</p>
+                  <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 transition-colors duration-300">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

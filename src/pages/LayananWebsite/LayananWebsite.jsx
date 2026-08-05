@@ -12,77 +12,6 @@ import portfolioWebImg from '../../assets/portfolio-web.png';
 import heroWebImg from '../../assets/hero-web.png';
 
 /* ══════════════════════════════════════════════════════════════════════════
-   JENIS WEBSITE DATA
-   ══════════════════════════════════════════════════════════════════════════ */
-const jenisWebsite = [
-  {
-    id: 'landing-page',
-    title: 'Landing Page',
-    tagline: 'Konversi pengunjung menjadi pelanggan',
-    description: 'Halaman tunggal yang didesain khusus untuk mengonversi pengunjung menjadi pelanggan. Cocok untuk promosi produk, event, atau bisnis yang baru berdiri.',
-    price: 'Mulai Rp799.000',
-    features: ['Desain modern & menarik', 'CTA yang jelas dan efektif', 'Integrasi WhatsApp langsung', 'Mobile responsive 100%', 'Load time dioptimasi', 'Form kontak / lead'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
-      </svg>
-    ),
-  },
-  {
-    id: 'company-profile',
-    title: 'Company Profile',
-    tagline: 'Representasi digital perusahaan Anda',
-    description: 'Website multi-halaman yang profesional untuk membangun kredibilitas perusahaan. Tampilkan profil, layanan, tim, dan pencapaian bisnis Anda secara elegan.',
-    price: 'Mulai Rp1.499.000',
-    features: ['Hingga 8 halaman', 'Desain premium custom', 'Profil tim & struktur organisasi', 'Portfolio & testimoni', 'Kontak & peta lokasi', 'SEO dasar'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-  },
-  {
-    id: 'website-umkm',
-    title: 'Website UMKM',
-    tagline: 'Go digital untuk usaha Anda',
-    description: 'Website terjangkau khusus untuk usaha mikro, kecil, dan menengah yang ingin memperluas jangkauan pelanggan secara digital dengan biaya yang efisien.',
-    price: 'Mulai Rp799.000',
-    features: ['Profil usaha lengkap', 'Informasi produk & layanan', 'Integrasi WhatsApp order', 'Galeri foto produk', 'SEO lokal (Google Maps)', 'Domain & hosting setup'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" />
-      </svg>
-    ),
-  },
-  {
-    id: 'website-portfolio',
-    title: 'Website Portfolio',
-    tagline: 'Tampilkan karya terbaik Anda',
-    description: 'Website personal yang elegan untuk menampilkan karya, skill, dan pengalaman Anda kepada calon klien atau employer. Kesan pertama yang tak terlupakan.',
-    price: 'Mulai Rp799.000',
-    features: ['Galeri proyek yang rapi', 'About me & bio profesional', 'Kontak & form langsung', 'Link sosial media', 'Desain personal & unik', 'Mobile responsive'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
-      </svg>
-    ),
-  },
-  {
-    id: 'website-custom',
-    title: 'Website Custom',
-    tagline: 'Sepenuhnya sesuai kebutuhan Anda',
-    description: 'Website yang dibangun dari nol sesuai dengan spesifikasi dan kebutuhan unik Anda. Tidak ada batasan fitur — dari website kenangan pribadi hingga platform bisnis kompleks.',
-    price: 'Harga sesuai scope',
-    features: ['Fitur sepenuhnya custom', 'Desain unik tanpa template', 'Integrasi API jika diperlukan', 'Konsultasi mendalam', 'Skalabel & maintainable', 'Support prioritas'],
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
-      </svg>
-    ),
-  },
-];
-
-/* ══════════════════════════════════════════════════════════════════════════
    WORKFLOW STEPS
    ══════════════════════════════════════════════════════════════════════════ */
 const webWorkflow = [
@@ -181,10 +110,10 @@ export function LayananWebsite() {
             <h2 className="font-heading text-[1.75rem] md:text-4xl font-bold text-primary-800 dark:text-white leading-[1.15] tracking-[-0.02em] mb-6 transition-colors duration-300">
               Website yang Bekerja untuk Bisnis Anda, 24 Jam Sehari
             </h2>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed mb-4 transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4 transition-colors duration-300">
               Di era digital ini, website bukan sekadar kehadiran online — melainkan aset bisnis terpenting Anda. Drena Creative hadir untuk memastikan website Anda tidak hanya terlihat indah, tetapi juga bekerja efektif dalam mengkonversi pengunjung menjadi pelanggan.
             </p>
-            <p className="font-body text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed transition-colors duration-300">
+            <p className="font-body text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed transition-colors duration-300">
               Setiap website yang kami bangun dirancang dengan mempertimbangkan pengalaman pengguna (UX), kecepatan loading, dan optimasi untuk mesin pencari (SEO) — semua dalam satu paket yang terjangkau.
             </p>
           </motion.div>
@@ -203,7 +132,7 @@ export function LayananWebsite() {
             ].map((stat) => (
               <div key={stat.label} className="bg-gradient-to-br from-primary-50 to-white dark:from-primary-900 dark:to-primary-950 border border-neutral-100 dark:border-white/10 rounded-xl p-6 text-center transition-colors duration-300">
                 <p className="font-heading text-3xl font-bold text-primary dark:text-tertiary-300 mb-1 tracking-[-0.02em]">{stat.num}</p>
-                <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 transition-colors duration-300">{stat.label}</p>
+                <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 transition-colors duration-300">{stat.label}</p>
               </div>
             ))}
           </motion.div>
@@ -240,13 +169,17 @@ export function LayananWebsite() {
                   <img
                     src={portfolioWebImg}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="675"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-5 bg-white dark:bg-primary-950 transition-colors duration-300">
                   <span className="font-heading text-[9px] font-bold tracking-[0.1em] uppercase text-primary dark:text-primary-400 mb-2 block transition-colors duration-300">{item.type}</span>
                   <h3 className="font-heading text-sm font-bold text-primary-800 dark:text-white mb-1 transition-colors duration-300">{item.title}</h3>
-                  <p className="font-body text-xs text-neutral-500 dark:text-neutral-400 transition-colors duration-300">{item.desc}</p>
+                  <p className="font-body text-xs text-neutral-600 dark:text-neutral-300 transition-colors duration-300">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

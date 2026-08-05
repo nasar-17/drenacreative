@@ -15,7 +15,7 @@ export function Contact({
   ctaTitle = (
     <>Mulai Proyek <br /><br /> Anda Sekarang</>
   ),
-  ctaSubtitle = 'Konsultasikan kebutuhan Anda sekarang. Kami siap membantu pembuatan website, desain, maupun tugas kuliah dengan proses cepat, hasil rapi, dan biaya terjangkau.',
+  ctaSubtitle = 'Konsultasikan kebutuhan Anda sekarang. Kami siap membantu pembuatan website, desain, maupun pengembangan aplikasi dengan proses cepat, hasil rapi, dan biaya terjangkau.',
   ctaButton = 'KONSULTASI GRATIS',
   waMessage = 'Halo Drena Creative, saya ingin konsultasi mengenai layanan Anda.',
 }) {
@@ -41,7 +41,7 @@ export function Contact({
           >
             {ctaTitle}
           </h2>
-          <p className="font-body text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] mb-10 transition-colors duration-300">
+          <p className="font-body text-base font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] mb-10 transition-colors duration-300">
             {ctaSubtitle}
           </p>
           <a
@@ -93,7 +93,7 @@ export function Contact({
                   </svg>
                 </div>
                 <div className="flex flex-col gap-[2px]">
-                  <span className="font-heading text-[10px] font-bold text-neutral-400 tracking-[0.1em] uppercase">EMAIL KAMI</span>
+                  <span className="font-heading text-[10px] font-bold text-neutral-600 tracking-[0.1em] uppercase">EMAIL KAMI</span>
                   <a
                     href="mailto:drenacreative@gmail.com"
                     target="_blank"
@@ -115,7 +115,7 @@ export function Contact({
                   </svg>
                 </div>
                 <div className="flex flex-col gap-[2px]">
-                  <span className="font-heading text-[10px] font-bold text-neutral-400 tracking-[0.1em] uppercase">WHATSAPP KAMI</span>
+                  <span className="font-heading text-[10px] font-bold text-neutral-600 tracking-[0.1em] uppercase">WHATSAPP KAMI</span>
                   <a
                     href="https://wa.me/6288242328927"
                     target="_blank"

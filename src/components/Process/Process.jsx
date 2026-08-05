@@ -12,7 +12,7 @@ export function Process() {
         transition={{ duration: 0.8 }}
       >
         <h2 className="font-heading text-[2rem] md:text-4xl lg:text-[3rem] font-bold text-primary-800 dark:text-white tracking-[-0.02em] mb-5 leading-[1.15] transition-colors duration-300">Cara Kami Bekerja</h2>
-        <p className="font-body text-sm md:text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+        <p className="font-body text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
           Kami menerapkan proses kerja yang jelas dan terstruktur untuk memastikan setiap proyek selesai tepat waktu dengan hasil yang sesuai kebutuhan Anda.
         </p>
       </motion.div>
@@ -46,7 +46,7 @@ export function Process() {
               </svg>
             </div>
             <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">Konsultasi</h3>
-            <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+            <p className="font-body text-xs font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
               Kami memulai dengan memahami kebutuhan dan tujuan Anda secara detail, agar solusi yang diberikan benar-benar sesuai.
             </p>
           </div>
@@ -72,7 +72,7 @@ export function Process() {
               </svg>
             </div>
             <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">Perencanaan & Desain</h3>
-            <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+            <p className="font-body text-xs font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
               Kami merancang konsep dan tampilan yang sesuai dengan kebutuhan Anda, dengan fokus pada kemudahan penggunaan dan tampilan yang profesional.
             </p>
           </div>
@@ -97,7 +97,7 @@ export function Process() {
               </svg>
             </div>
             <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">Revisi & Penyelesaian</h3>
-            <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+            <p className="font-body text-xs font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
               Kami melakukan pengecekan akhir dan revisi jika diperlukan, hingga hasil benar-benar siap digunakan.
             </p>
           </div>
@@ -122,7 +122,7 @@ export function Process() {
               </svg>
             </div>
             <h3 className="font-heading text-xl font-bold text-primary-800 dark:text-white mb-3 tracking-[-0.01em] transition-colors duration-300">Pengiriman</h3>
-            <p className="font-body text-xs font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">
+            <p className="font-body text-xs font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">
               Tinjauan struktural akhir, penerapan, dan serah terima. Memastikan kualitas jangka panjang dan kinerja tingkat tinggi.
             </p>
           </div>

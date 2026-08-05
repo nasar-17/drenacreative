@@ -4,22 +4,84 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Drena Creative — Solusi digital untuk mahasiswa, UMKM, dan bisnis. Layanan pembuatan website profesional, desain kreatif, dan bantuan tugas akademik yang cepat, rapi, dan terjangkau." />
+    <meta name="description" content="Drena Creative — Solusi digital untuk mahasiswa, UMKM, dan bisnis. Layanan pembuatan website profesional, desain kreatif, dan pengembangan aplikasi yang cepat, rapi, dan terjangkau." />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#162530" />
+    <link rel="canonical" href="https://drenacreative.vercel.app/" />
+
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Drena Creative" />
-    <meta property="og:title" content="Drena Creative — Solusi Website, Desain & Tugas Profesional" />
-    <meta property="og:description" content="Layanan website, desain kreatif, dan bantuan tugas akademik. Cepat, profesional, dan terjangkau." />
+    <meta property="og:title" content="Drena Creative — Solusi Website, Desain & Aplikasi Profesional" />
+    <meta property="og:description" content="Layanan website, desain kreatif, dan pengembangan aplikasi. Cepat, profesional, dan terjangkau." />
+    <meta property="og:url" content="https://drenacreative.vercel.app/" />
+    <meta property="og:image" content="https://drenacreative.vercel.app/Logo.png" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Drena Creative — Solusi Website, Desain & Aplikasi Profesional" />
+    <meta name="twitter:description" content="Layanan website, desain kreatif, dan pengembangan aplikasi. Cepat, profesional, dan terjangkau." />
+    <meta name="twitter:image" content="https://drenacreative.vercel.app/Logo.png" />
 
-    <!-- Google Fonts: Space Grotesk (Headline) & Manrope (Body/Label) -->
+    <!-- Google Fonts: Poppins (matches tailwind.config fontFamily) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200..800&display=swap"
       rel="stylesheet"
     />
 
-    <title>Drena Creative — Solusi Website, Desain & Tugas Profesional</title>
+    <!-- Preconnect untuk third-party tracking (Meta Pixel, GTM, Consent Manager) -->
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.consentmanager.net" crossorigin />
+    <link rel="preconnect" href="https://d.delivery.consentmanager.net" crossorigin />
+
+    <title>Drena Creative — Solusi Website, Desain & Aplikasi Profesional</title>
+
+    <!-- Mencegah flash dark-mode sebelum React mount -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Drena Creative",
+      "url": "https://drenacreative.vercel.app/",
+      "logo": "https://drenacreative.vercel.app/Logo.png",
+      "sameAs": [
+        "https://www.instagram.com/drena_creative/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+6288242328927",
+        "contactType": "customer service",
+        "areaServed": "ID",
+        "availableLanguage": "Indonesian"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Drena Creative",
+      "url": "https://drenacreative.vercel.app/",
+      "inLanguage": "id",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Drena Creative"
+      }
+    }
+    </script>
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -47,14 +109,6 @@
       );
       fbq("init", "1008084651599585");
       fbq("track", "PageView");
-    </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1008084651599585&ev=PageView&noscript=1"
-    /></noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- Google Tag Manager (gtag.js) -->
@@ -79,6 +133,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Meta Pixel Code (noscript) -->
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1008084651599585&ev=PageView&noscript=1"
+    /></noscript>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W49SC2N6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->

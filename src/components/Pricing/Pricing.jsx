@@ -273,14 +273,14 @@ function PricingCard({ pkg, index }) {
 
         {/* Cocok Untuk */}
         <div className="mb-6 relative z-10">
-          <p className="font-heading text-[10px] font-bold text-white/40 tracking-[0.12em] uppercase mb-2">
+          <p className="font-heading text-[10px] font-bold text-white/70 tracking-[0.12em] uppercase mb-2">
             Cocok Untuk
           </p>
           <ul className="flex flex-col gap-1.5">
             {forList.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <DotIcon featured />
-                <span className="font-body text-xs text-white/60 leading-[1.6]">{item}</span>
+                <span className="font-body text-xs text-white/80 leading-[1.6]">{item}</span>
               </li>
             ))}
           </ul>
@@ -332,7 +332,7 @@ function PricingCard({ pkg, index }) {
       </p>
 
       {/* Description */}
-      <p className="font-body text-sm font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] mb-6 transition-colors duration-300">
+      <p className="font-body text-sm font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] mb-6 transition-colors duration-300">
         {description}
       </p>
 
@@ -344,21 +344,21 @@ function PricingCard({ pkg, index }) {
         {features.map((f) => (
           <li key={f} className="flex items-start gap-2.5">
             <CheckIcon featured={false} />
-            <span className="font-body text-xs text-neutral-600 dark:text-neutral-400 leading-[1.7] transition-colors duration-300">{f}</span>
+            <span className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-[1.7] transition-colors duration-300">{f}</span>
           </li>
         ))}
       </ul>
 
       {/* Cocok Untuk */}
       <div className="mb-6">
-        <p className="font-heading text-[10px] font-bold text-neutral-400 dark:text-neutral-500 tracking-[0.12em] uppercase mb-2 transition-colors duration-300">
+        <p className="font-heading text-[10px] font-bold text-neutral-600 dark:text-neutral-300 tracking-[0.12em] uppercase mb-2 transition-colors duration-300">
           Cocok Untuk
         </p>
         <ul className="flex flex-col gap-1.5">
           {forList.map((item) => (
             <li key={item} className="flex items-start gap-2">
               <DotIcon featured={false} />
-              <span className="font-body text-xs text-neutral-500 dark:text-neutral-400 leading-[1.6] transition-colors duration-300">{item}</span>
+              <span className="font-body text-xs text-neutral-600 dark:text-neutral-300 leading-[1.6] transition-colors duration-300">{item}</span>
             </li>
           ))}
         </ul>
@@ -404,7 +404,7 @@ export function Pricing() {
           <h2 className="font-heading text-[1.75rem] md:text-[2.25rem] lg:text-[3.5rem] font-bold text-primary-800 dark:text-white tracking-[-0.02em] mb-6 leading-[1.15] transition-colors duration-300">
             Paket Website
           </h2>
-          <p className="font-body text-base font-normal text-neutral-500 dark:text-neutral-400 leading-[1.7] max-w-[580px] mx-auto transition-colors duration-300">
+          <p className="font-body text-base font-normal text-neutral-600 dark:text-neutral-300 leading-[1.7] max-w-[580px] mx-auto transition-colors duration-300">
             Pilih paket yang sesuai dengan kebutuhan bisnis Anda. Semua paket mendapatkan revisi
             sepuasnya selama pengerjaan dan garansi bug selama 30 hari.
           </p>
@@ -424,7 +424,7 @@ export function Pricing() {
 
         {/* ── Disclaimer note ── */}
         <motion.p
-          className="max-w-[800px] mx-auto mt-10 md:mt-12 font-body text-xs text-neutral-400 dark:text-neutral-500 leading-[1.8] text-center transition-colors duration-300"
+          className="max-w-[800px] mx-auto mt-10 md:mt-12 font-body text-xs text-neutral-600 dark:text-neutral-300 leading-[1.8] text-center transition-colors duration-300"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}

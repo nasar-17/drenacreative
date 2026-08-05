@@ -40,7 +40,7 @@ export function SectionHeader({ eyebrow, title, subtitle, maxW = 'max-w-[560px]'
       {subtitle && (
         <p
           className={`font-body text-base font-normal leading-[1.7] ${maxW} mx-auto transition-colors duration-300 ${
-            light ? 'text-white/75' : 'text-neutral-500 dark:text-neutral-400'
+            light ? 'text-white/75' : 'text-neutral-600 dark:text-neutral-300'
           }`}
         >
           {subtitle}
