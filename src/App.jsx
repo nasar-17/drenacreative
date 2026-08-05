@@ -5,8 +5,8 @@ import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { Home } from './pages/Home/Home';
 import { LayananWebsite } from './pages/LayananWebsite/LayananWebsite';
-import { LayananDesign } from './pages/LayananDesign/LayananDesign';
-import { LayananTugas } from './pages/LayananTugas/LayananTugas';
+import { LayananAIContentBranding } from './pages/LayananAIContentBranding/LayananAIContentBranding';
+import { LayananAplikasi } from './pages/LayananAplikasi/LayananAplikasi';
 import { Produk } from './pages/Produk/Produk';
 import './App.css';
 
@@ -27,8 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/layanan-website" element={<LayananWebsite />} />
-        <Route path="/layanan-design" element={<LayananDesign />} />
-        <Route path="/layanan-tugas" element={<LayananTugas />} />
+        <Route path="/layanan-ai-content-branding" element={<LayananAIContentBranding />} />
+        <Route path="/layanan-aplikasi" element={<LayananAplikasi />} />
         <Route path="/produk" element={<Produk />} />
       </Routes>
     </>
