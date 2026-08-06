@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MotionConfig } from 'framer-motion';
 import { Navbar } from './components/Navbar/Navbar';
@@ -6,6 +6,8 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp/FloatingWhatsApp
 import { ScrollToTop } from './components/ScrollToTop/ScrollToTop';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import { Home } from './pages/Home/Home';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import './App.css';
 
 // Route-level code splitting — halaman layanan hanya dimuat saat dikunjungi
@@ -29,6 +31,25 @@ function PageLoader() {
 function App() {
   // Initialize scroll animations globally
   useScrollReveal();
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <MotionConfig reducedMotion="user">

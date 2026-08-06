@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Hero } from '../../components/Hero/Hero';
 import { About } from '../../components/About/About';
+import { ScrollVideoContainer } from '../../components/ScrollVideoContainer/ScrollVideoContainer';
 import { Process } from '../../components/Process/Process';
 import { Contact } from '../../components/Contact/Contact';
 import { Footer } from '../../components/Footer/Footer';
@@ -284,15 +285,10 @@ export function Home() {
         ]}
       />
 
-      {/* ── 1. Section: Hero ── */}
-      <div id="hero">
-        <Hero />
-      </div>
-
-      {/* ── 2. Section: About ── */}
-      <div id="about">
-        <About />
-      </div>
+      <ScrollVideoContainer>
+        <Hero transparent />
+        <About transparent />
+      </ScrollVideoContainer>
 
       {/* ── 2b. Section: Proses (target anchor #proses) ── */}
       <Process />

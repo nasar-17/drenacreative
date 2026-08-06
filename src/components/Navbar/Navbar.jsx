@@ -248,7 +248,7 @@ export function Navbar() {
               : 'text-white hover:text-white/85 bg-black/20 backdrop-blur-md border border-white/10'
           }`}
         >
-          <img src={isDarkMode ? "/logo-darkmode.png" : "/Logo.png"} className="w-8 h-8 md:w-10 md:h-10 object-contain shrink-0" alt="Drena Creative Logo" />
+          <img src="/Logo.png" className="w-8 h-8 md:w-10 md:h-10 object-contain shrink-0" alt="Drena Creative Logo" />
           <span className="text-[14px] md:text-lg tracking-normal md:tracking-[0.12em]">DRENA CREATIVE</span>
         </Link>
 

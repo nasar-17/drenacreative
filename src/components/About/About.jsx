@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import aboutImg from '../../assets/gen/about-building.webp'; // Creative workspace image
 
-export function About() {
+export function About({ transparent }) {
   return (
-    <section className="bg-white dark:bg-primary-950 py-24 md:py-32 px-5 md:px-8 overflow-hidden transition-colors duration-300" id="tentang">
+    <section className={`${transparent ? 'bg-transparent' : 'bg-white dark:bg-primary-950'} py-24 md:py-32 px-5 md:px-8 overflow-hidden transition-colors duration-300`} id="tentang">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 min-[900px]:grid-cols-2 gap-12 min-[900px]:gap-16 items-start">
         {/* Left column - Text */}
         <motion.div 

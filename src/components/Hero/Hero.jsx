@@ -1,30 +1,32 @@
 import { motion } from 'framer-motion';
 import heroBg from '../../assets/hero-bg.png';
 
-export function Hero() {
+export function Hero({ transparent }) {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden" id="hero">
       {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <picture>
-          <source
-            type="image/webp"
-            srcSet="/hero-bg-mobile.webp 768w, /hero-bg.webp 1600w"
-            sizes="100vw"
-          />
-          <img
-            src={heroBg}
-            alt=""
-            className="w-full h-full object-cover object-center block"
-            width="1920"
-            height="1080"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#283f54]/70 via-[#355872]/75 to-[#1c2e3e]/80" />
-      </div>
+      {!transparent && (
+        <div className="absolute inset-0 z-0">
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/hero-bg-mobile.webp 768w, /hero-bg.webp 1600w"
+              sizes="100vw"
+            />
+            <img
+              src={heroBg}
+              alt=""
+              className="w-full h-full object-cover object-center block"
+              width="1920"
+              height="1080"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#283f54]/70 via-[#355872]/75 to-[#1c2e3e]/80" />
+        </div>
+      )}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 md:px-8 max-w-[800px] animate-heroFadeIn">
