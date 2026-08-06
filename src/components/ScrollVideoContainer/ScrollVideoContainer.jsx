@@ -2,51 +2,52 @@ import { useEffect, useRef, useState } from 'react';
 
 export function ScrollVideoContainer({ children }) {
   const containerRef = useRef(null);
-  const videoRef = useRef(null);
-  const [videoTime, setVideoTime] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const targetTimeRef = useRef(0);
+  const canvasRef = useRef(null);
+  const heroContentRef = useRef(null);
+  const aboutContentRef = useRef(null);
+  const aboutOverlayRef = useRef(null);
+
+  const targetFrameRef = useRef(0);
+  const currentFrameRef = useRef(0);
   const animationFrameId = useRef(null);
+  const imagesRef = useRef([]);
+
+  const totalFrames = 240;
 
   // Parse children to separate Hero and About
-  // We assume children[0] is Hero and children[1] is About
   const [heroChild, aboutChild] = children;
 
+  // Preload all frames on mount
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleLoadedMetadata = () => {
-      setIsLoaded(true);
-    };
-
-    if (video.readyState >= 1) {
-      handleLoadedMetadata();
-    } else {
-      video.addEventListener('loadedmetadata', handleLoadedMetadata);
+    const loadedImages = [];
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      const frameNum = String(i).padStart(3, '0');
+      img.src = `/frames/frame_${frameNum}.jpg`;
+      loadedImages.push(img);
     }
+    imagesRef.current = loadedImages;
 
-    return () => {
-      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+    // Draw the very first frame initially when loaded
+    loadedImages[0].onload = () => {
+      drawFrame(0);
     };
   }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current || !videoRef.current) return;
+      if (!containerRef.current) return;
 
       const rect = containerRef.current.getBoundingClientRect();
       const totalScrollableHeight = rect.height - window.innerHeight;
       
-      // Avoid division by zero
       if (totalScrollableHeight <= 0) return;
 
       // Calculate scroll progress within the container
       const scrolled = -rect.top;
       const progress = Math.max(0, Math.min(1, scrolled / totalScrollableHeight));
       
-      const videoDuration = videoRef.current.duration || 10;
-      targetTimeRef.current = progress * videoDuration;
+      targetFrameRef.current = progress * (totalFrames - 1);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -61,36 +62,74 @@ export function ScrollVideoContainer({ children }) {
     };
   }, []);
 
+  const drawFrame = (frameIndex) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const img = imagesRef.current[frameIndex];
+    if (img && img.complete) {
+      ctx.drawImage(img, 0, 0, 1280, 720);
+    }
+  };
+
   // Smooth interpolation loop (Lerp)
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    let lastTime = 0;
-
-    const updateVideoProgress = () => {
-      // Prevent overloading the browser with seek requests if it's already seeking
-      if (!video.seeking) {
-        const diff = targetTimeRef.current - video.currentTime;
-        
-        if (Math.abs(diff) < 0.01) {
-          video.currentTime = targetTimeRef.current;
-        } else {
-          // Adjust lerp speed (e.g. 0.08) for maximum smoothness
-          video.currentTime += diff * 0.08;
-        }
+    const updateProgress = () => {
+      const diff = targetFrameRef.current - currentFrameRef.current;
+      
+      if (Math.abs(diff) < 0.05) {
+        currentFrameRef.current = targetFrameRef.current;
+      } else {
+        // Easing factor of 0.06 makes the transition ultra smooth
+        currentFrameRef.current += diff * 0.06;
       }
 
-      // Throttle React state updates to save rendering cycles
-      if (Math.abs(video.currentTime - lastTime) > 0.05) {
-        lastTime = video.currentTime;
-        setVideoTime(video.currentTime);
+      const currentFrame = currentFrameRef.current;
+      const frameIndex = Math.max(0, Math.min(totalFrames - 1, Math.round(currentFrame)));
+      
+      // Draw frame on canvas
+      drawFrame(frameIndex);
+
+      // Calculate opacities based on frame numbers
+      // Hero fades out from frame 72 to 96
+      let heroOpacity = 1;
+      if (currentFrame < 72) {
+        heroOpacity = 1;
+      } else if (currentFrame >= 72 && currentFrame <= 96) {
+        heroOpacity = 1 - (currentFrame - 72) / 24;
+      } else {
+        heroOpacity = 0;
       }
 
-      animationFrameId.current = requestAnimationFrame(updateVideoProgress);
+      // About fades in from frame 144 to 172
+      let aboutOpacity = 0;
+      if (currentFrame < 144) {
+        aboutOpacity = 0;
+      } else if (currentFrame >= 144 && currentFrame <= 172) {
+        aboutOpacity = (currentFrame - 144) / 28;
+      } else {
+        aboutOpacity = 1;
+      }
+
+      // Directly manipulate DOM styles for absolute 60+ FPS smooth rendering (0 React overhead)
+      if (heroContentRef.current) {
+        heroContentRef.current.style.opacity = heroOpacity;
+        heroContentRef.current.style.pointerEvents = heroOpacity > 0.1 ? 'auto' : 'none';
+      }
+
+      if (aboutContentRef.current) {
+        aboutContentRef.current.style.opacity = aboutOpacity;
+        aboutContentRef.current.style.pointerEvents = aboutOpacity > 0.1 ? 'auto' : 'none';
+      }
+
+      if (aboutOverlayRef.current) {
+        aboutOverlayRef.current.style.opacity = aboutOpacity;
+      }
+
+      animationFrameId.current = requestAnimationFrame(updateProgress);
     };
 
-    animationFrameId.current = requestAnimationFrame(updateVideoProgress);
+    animationFrameId.current = requestAnimationFrame(updateProgress);
 
     return () => {
       if (animationFrameId.current) {
@@ -99,69 +138,39 @@ export function ScrollVideoContainer({ children }) {
     };
   }, []);
 
-  // Calculate opacities based on current video time
-  // Transition is between 5.4s and 6.6s (centered around 6.0s)
-  const transitionStart = 5.4;
-  const transitionEnd = 6.6;
-
-  let heroOpacity = 1;
-  let aboutOpacity = 0;
-
-  if (videoTime < transitionStart) {
-    heroOpacity = 1;
-    aboutOpacity = 0;
-  } else if (videoTime >= transitionStart && videoTime <= transitionEnd) {
-    const p = (videoTime - transitionStart) / (transitionEnd - transitionStart);
-    heroOpacity = 1 - p;
-    aboutOpacity = p;
-  } else {
-    heroOpacity = 0;
-    aboutOpacity = 1;
-  }
-
-  // Linear interpolation for overlay transition
-  // Hero gradient overlay to About background/overlay (white/dark bg with some transparency)
-  const overlayProgress = Math.max(0, Math.min(1, (videoTime - transitionStart) / (transitionEnd - transitionStart)));
-
   return (
-    <div ref={containerRef} className="relative w-full bg-primary-950" style={{ height: '300vh' }}>
+    <div ref={containerRef} className="relative w-full bg-primary-950" style={{ height: '500vh' }}>
       {/* Scroll anchors */}
       <div id="hero" className="absolute top-0 left-0 w-1 h-1 pointer-events-none" />
-      <div id="about" className="absolute left-0 w-1 h-1 pointer-events-none" style={{ top: '180vh' }} />
-      <div id="tentang" className="absolute left-0 w-1 h-1 pointer-events-none" style={{ top: '180vh' }} />
+      <div id="about" className="absolute left-0 w-1 h-1 pointer-events-none" style={{ top: '300vh' }} />
+      <div id="tentang" className="absolute left-0 w-1 h-1 pointer-events-none" style={{ top: '300vh' }} />
 
       {/* Sticky viewport container */}
       <div className="sticky top-0 w-full h-screen overflow-hidden">
-        {/* Background video */}
-        <video
-          ref={videoRef}
-          src="/video.mp4"
+        {/* Canvas for frame drawing */}
+        <canvas
+          ref={canvasRef}
+          width={1280}
+          height={720}
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0)' }}
-          muted
-          playsInline
-          preload="auto"
         />
 
         {/* Existing Overlays */}
-        {/* Hero Overlay (always active or fading out during transition) */}
+        {/* About Overlay (fading in from frame 144 to 172) */}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[#283f54]/70 via-[#355872]/75 to-[#1c2e3e]/80 z-10 transition-opacity duration-300"
-          style={{ opacity: 1 - overlayProgress }}
-        />
-
-        {/* About Overlay (fading in during transition: dark mode is dark, light mode is light) */}
-        <div
-          className="absolute inset-0 bg-white/40 dark:bg-primary-950/40 z-10 transition-opacity duration-300"
-          style={{ opacity: overlayProgress }}
+          ref={aboutOverlayRef}
+          className="absolute inset-0 bg-white/40 dark:bg-primary-950/40 z-10 transition-opacity duration-150"
+          style={{ opacity: 0 }}
         />
 
         {/* Foreground Content: Hero */}
         <div
-          className="absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-300"
+          ref={heroContentRef}
+          className="absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-150"
           style={{
-            opacity: heroOpacity,
-            pointerEvents: heroOpacity > 0.1 ? 'auto' : 'none'
+            opacity: 1,
+            pointerEvents: 'auto'
           }}
         >
           {heroChild}
@@ -169,10 +178,11 @@ export function ScrollVideoContainer({ children }) {
 
         {/* Foreground Content: About */}
         <div
-          className="absolute inset-0 z-20 overflow-y-auto flex items-center justify-center transition-opacity duration-300"
+          ref={aboutContentRef}
+          className="absolute inset-0 z-20 overflow-y-auto flex items-center justify-center transition-opacity duration-150"
           style={{
-            opacity: aboutOpacity,
-            pointerEvents: aboutOpacity > 0.1 ? 'auto' : 'none'
+            opacity: 0,
+            pointerEvents: 'none'
           }}
         >
           <div className="w-full h-full">
